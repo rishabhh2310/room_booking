@@ -1,0 +1,10 @@
+create database room;
+use room;
+create table admin(username varchar(40) not null,password varchar(40) not null );
+insert into admin values('admin','password');
+create table user(uname varchar(40) not null,password varchar(40) not null,name varchar(40) not null);
+insert into user values('gaurav','gaurav','gaurav');
+create table room(name varchar(40) not null,capacity int not null);
+insert into room('A1-NKN','120');
+create table bookings(id int not null,timestamp timestamp not null,date date not null,room varchar(30) not null,stime time not null,etime time not null,purpose varchar(50) not null,username varchar(50) not null,primary key(id));
+
